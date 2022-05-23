@@ -18,22 +18,18 @@
 
 label {
     display: block;
-    font-size: 0.75rem;
-    color: #000;
-    font-weight: bold;
     letter-spacing: 2px;
-}
-
-.flex {
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
 body {
     height: 100vh;
     width: 100vw;
+    max-width: 2060px;
+    margin: 0 auto;
     font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    background-color: #F8F7F7;
+
 }
 
 input {
@@ -68,18 +64,15 @@ h2 {
     font-size: 1.5rem;
 }
 
-/* Mobile layout */
-@media screen and (max-width: 768px) {
-    body {
-        height: 100vh;
-        width: 100vh;
-        background-image: url(../images/background-large.jpg);
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-    }
+.font {
+    font-size: 0.75rem;
+    color: #000;
+    font-weight: bold;
 }
 
+.padding {
+    padding: 1rem 2.5rem;
+}
 
 
 /* Styling for image area */
@@ -91,11 +84,16 @@ h2 {
     background-repeat: no-repeat;
     background-size: cover;
     color: var(--fontColorWhite);
+    
+    display: inherit;
     flex-direction: column;
-    justify-content: space-between;
+    text-align: center;
 }
 
 .image-containor div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     height: 120px;
     margin-top: 150px;
     background-color: rgba(0, 0, 0, 0.32);
@@ -137,23 +135,65 @@ h2 {
     width: 70vw;
     display: grid;
     grid-template-rows: 4fr 4fr 2fr;
-    background-color: rgba(211, 211, 211, 0.18);
-   
+    background-color: rgb(217 209 209 / 18%);
 }
 
 .input-section {
-    background-color: #fff;
+    background-color: #fff !important;
     padding-right: calc(100% - 600px);
 }
-
-.submit-section p{
-    font-size: 0.75rem;
-    color: #000;
-    font-weight: bold;
-}
-
 
 .submit-section a{
     color: var(--btnBgColor);
 }
 
+
+@media screen and (max-width: 770px) {
+    body {
+        height: 100%;
+        flex-direction: column;
+        background-image: url(../images/background-large.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        flex-direction: column;
+    }
+
+    h2 {
+        font-size: 1rem;
+    }
+
+    .padding {
+        padding: 1rem;
+    }
+
+    .input-containor {
+        display: flex;
+        flex-direction: column;
+        background-color: #F8F7F7;
+    }
+
+    .image-containor p {
+        display: none;
+
+    }
+
+    .area {
+        height: 100%;
+        width: 100%;
+        display: felx;
+        flex-direction: column;
+    }
+
+    .submit-section {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    button[type="submit"] {
+        width: 100%;
+    }
+
+}
