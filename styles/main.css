@@ -1,0 +1,159 @@
+/* Global declarations */
+
+@font-face {
+    font-family: NorseBold;
+    src: url(../font/Norse-Bold.otf);
+}
+
+:root {
+    --fontname: NorseBold;
+    --btnBgColor: #596D48;
+    --borderColor: #E5E7EB;
+    --fontColorWhite: #fff;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+label {
+    display: block;
+    font-size: 0.75rem;
+    color: #000;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+input {
+    outline: none;
+    border: 1px solid var(--borderColor);
+    border-radius: 0.25rem;
+    height: 28px;
+    width: 250px;
+    padding: 0 0.5rem;
+}
+
+input:focus {
+    border: 1px solid blue;
+    box-shadow: 1px 1px blue;
+}
+
+input:invalid {
+    border: 1px solid red;
+    box-shadow: 1px 1px red;
+}
+
+button[type="submit"] {
+    outline: none;
+    border: none;
+    color: white;
+    padding: 0.7rem 1.5rem;
+    border-radius: 0.5rem;
+    background-color: var(--btnBgColor);
+}
+
+h2 {
+    font-size: 1.5rem;
+}
+
+/* Mobile layout */
+@media screen and (max-width: 768px) {
+    body {
+        height: 100vh;
+        width: 100vh;
+        background-image: url(../images/background-large.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+}
+
+
+
+/* Styling for image area */
+.image-containor {
+    height: 100%;
+    width: calc(100vw - 70vw);
+    background-image: url(../images/background-large.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: var(--fontColorWhite);
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.image-containor div {
+    height: 120px;
+    margin-top: 150px;
+    background-color: rgba(0, 0, 0, 0.32);
+    width: 100%;
+}
+
+.image-containor img{
+    height: auto;
+    max-width: 75px;
+    margin: 0 1rem;
+}
+
+.image-containor h1 {
+    font-family: var(--fontname);
+    font-size: 5rem;
+}
+
+.image-containor a, p {
+    color: var(--fontColorWhite);
+    font-weight: 100;
+    font-size: 0.75rem;
+}
+
+/* STYING FOR FROM PART */
+.area-padding{
+    padding: 1rem 2.5rem;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr) );
+    grid-template-rows: repeat(auto-fit, minmax(65px, 1fr));
+    grid-auto-rows:minmax(65px, 1fr) ;
+}
+
+/* area modifications */
+.input-containor {
+    height: 100%;
+    width: 70vw;
+    display: grid;
+    grid-template-rows: 4fr 4fr 2fr;
+    background-color: rgba(211, 211, 211, 0.18);
+   
+}
+
+.input-section {
+    background-color: #fff;
+    padding-right: calc(100% - 600px);
+}
+
+.submit-section p{
+    font-size: 0.75rem;
+    color: #000;
+    font-weight: bold;
+}
+
+
+.submit-section a{
+    color: var(--btnBgColor);
+}
+
