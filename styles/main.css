@@ -46,6 +46,10 @@ input:focus {
     box-shadow: 1px 1px blue;
 }
 
+input:valid {
+    color: green;
+}
+
 input:invalid {
     border: 1px solid red;
     box-shadow: 1px 1px red;
@@ -72,6 +76,13 @@ h2 {
 
 .padding {
     padding: 1rem 2.5rem;
+}
+
+.error {
+    color: red;
+    display: inline-block;
+    max-width: 250px;
+    font-size: 0.75rem;
 }
 
 

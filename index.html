@@ -7,6 +7,7 @@
     <title>Sign Up</title>
     <link rel="stylesheet" href="./styles/reset.css">
     <link rel="stylesheet" href="./styles/main.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 </head>
 <body class="flex">
 
@@ -48,7 +49,7 @@
     
                             <div class="input-item">
                                 <label class="font" for="email">EMAIL</label>
-                                <input type="email" name="email" id="email">
+                                <input class="check" type="email" name="email" id="email">
                             </div>
     
                             <div class="input-item">
@@ -58,12 +59,14 @@
     
                             <div class="input-item">    
                                 <label class="font" for="password">PASSWORD</label>
-                                <input type="password" name="password" id="password">
+                                <input class="check" type="password" name="password" id="password" pattern="^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{8,}$">
+                                <span class="error password">Password is not valid, it must contain 1 letter, 1 number and 1 special character</span>
                             </div>
     
                             <div class="input-item">
                                 <label class="font" for="passwordConfirmation">CONFIRM PASSWORD</label>
-                                <input type="password" name="passwordConfirmation" id="passwordConfirmation">
+                                <input class="check" type="password" name="passwordConfirmation" id="passwordConfirmation" pattern="^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{8,}$">
+                                <span class="error passwordConfirmation">Password is not matching</span>
                             </div>
     
                         </div>
@@ -78,5 +81,6 @@
             </div>
         </div>
 
+    <script src="./scripts/script.js"></script>
 </body>
 </html>
